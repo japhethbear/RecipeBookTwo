@@ -11,11 +11,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.linkedin.com/in/japhethbear/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          I finally got an app deployed with Azure App Services!
         </a>
       </header>
     </div>
