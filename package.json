@@ -14,7 +14,7 @@
     "react-dropzone": "^14.2.3",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.18.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -47,7 +47,6 @@
     "@rollup/plugin-terser": "^0.4.4",
     "svgo": "^2.8.0"
   },
-
   "plugins": [
     "@babel/plugin-transform-private-property-in-object",
     "@babel/plugin-transform-private-methods",
