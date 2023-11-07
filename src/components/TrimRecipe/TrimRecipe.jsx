@@ -39,6 +39,69 @@ function TrimRecipe() {
     }
   };
 
+  const websiteConfigs = [
+    {
+      name: 'Farmhouse on Boone',
+      domain: 'www.farmhouseonboone.com',
+      selectors: {
+        title: 'h2.mv-create-title.mv-create-title-primary',
+        ingredients: 'div.mv-create-ingredients ul li',
+        instructions: 'div.mv-create-instructions.mv-create-instructions-slot-v2 ol li'
+      }
+    },
+    {
+      name: 'All Recipes',
+      domain: 'www.allrecipes.com',
+      selectors: {
+        title: '.loc.article-post-header h1.article-heading',
+        ingredients: '#mntl-structured-ingredients_1-0 ul li',
+        instructions: '#recipe__steps-content_1-0 ol li p.mntl-sc-block-html'
+      }
+    },
+  ];
+  
+  // // API route to handle recipe scraping
+  // app.post('/scrape-recipe', async (req, res) => {
+  //   try {
+  //     const { url } = req.body;
+  
+  //     // Fetch the HTML content of the provided URL
+  //     const response = await axios.get(url);
+  //     const html = response.data;
+  
+  //     // Use Cheerio to parse the HTML content
+  //     const $ = load(html);
+  
+  //     // Implement your scraping logic here to extract recipe data
+  //     const hostname = new URL(url).hostname;
+  //     const websiteConfig = websiteConfigs.find(config => config.domain === hostname);
+  
+  //     if (!websiteConfig) {
+  //       return res.status(400).json({ error: 'Unsupported website' })
+  //     }
+  
+  //     // For now, let's just send back the title of the page
+  //     const title = $(websiteConfig.selectors.title).text();
+  //     const ingredients = [];
+  //     const instructions = [];
+  
+  //     $(websiteConfig.selectors.ingredients).each((index, element) => {
+  //       const ingredient = $(element).text().trim();
+  //       ingredients.push(ingredient);
+  //     });
+  
+  //     $(websiteConfig.selectors.instructions).each((index, element) => {
+  //       const instruction = $(element).text().trim();
+  //       instructions.push(instruction);
+  //     });
+      
+  //     res.json({ title, ingredients, instructions });
+  //   } catch (error) {
+  //     console.error(error);
+  //     res.status(500).json({ error: 'An error occurred' });
+  //   }
+  // });
+
   const handleSaveImage = async () => {
     // Find the element you want to capture (the recipe content in this case)
     const recipeContentElement = document.querySelector('.recipe-background');
