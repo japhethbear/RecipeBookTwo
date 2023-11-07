@@ -42,6 +42,18 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
-  }
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@jridgewell/sourcemap-codec": "^1.4.15",
+    "@rollup/plugin-terser": "^0.4.4",
+    "svgo": "^2.8.0"
+  },
+
+  "plugins": [
+    "@babel/plugin-transform-private-property-in-object",
+    "@babel/plugin-transform-private-methods",
+    "@babel/plugin-transform-optional-chaining",
+    "@babel/plugin-transform-nullish-coalescing-operator",
+    "@babel/plugin-transform-numeric-separator",
+    "@babel/plugin-transform-class-properties"
+  ]
 }
