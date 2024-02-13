@@ -1,6 +1,6 @@
 import { prisma } from '@/db';
 import { redirect } from 'next/navigation';
-import Link from 'next/Link';
+import Link from 'next/link';
 import TodoItem from '../components/TodoItem';
 
 async function createTodo(data) {
