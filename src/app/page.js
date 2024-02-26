@@ -5,6 +5,7 @@ import { lusitana } from './ui/fonts';
 import Image from 'next/image';
 import kitchen2 from '../../public/images/kitchen2.jpg'
 import kitchen1 from '../../public/images/kitchen2.jpg'
+import NavLinks from './ui/dashboard/nav-links';
 
 
 
@@ -25,6 +26,7 @@ export default async function Home() {
   console.log(todos)
 
   return <>
+  <NavLinks/>
   <header className="flex justify-between items-center mb-4">
     <h1 className={`${lusitana.className} text-2xl`}>Todos</h1>
     <Link className ="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none" href="/new">
