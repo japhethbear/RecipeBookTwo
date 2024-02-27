@@ -4,6 +4,7 @@ import {
     UserGroupIcon,
     HomeIcon,
     DocumentDuplicateIcon,
+    RectangleGroupIcon
   } from '@heroicons/react/24/outline';
   import Link from 'next/link';
   import { usePathname } from 'next/navigation';
@@ -13,6 +14,7 @@ import {
   // Depending on the size of the application, this would be stored in a database.
   const links = [
     { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'Dashboard', href: '/dashboard', icon: RectangleGroupIcon },
     {
       name: 'Invoices',
       href: '/dashboard/invoices',
